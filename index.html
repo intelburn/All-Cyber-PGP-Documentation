@@ -18,6 +18,16 @@
 		<li><a href="https://tools.ietf.org/html/rfc4880">RFC 4880</a></li>
 		<li><a href="https://gnupg.org/">Website for GPG</a></li>
 	</ul>
+<h1>FAQ</h1>
+<dt><h2>Does this affect the other email on this account?</h2></dt>
+        <dd>No. This only affects the email that is sent using Thunderbird and Enigmail. All other email is competely unoffected. However, if someone is sending encrypted email, you will only see the ciphertext (see Receiving Encrypted Email).</dd>
+        <dt><h2>Can I receive email on my smartphone using this method.</h2></dt>
+        <dd>Yes and no. If the email account is able to be used on your phone you will still be able to use it on your phone. You will be able to see the encrypted text come into the inbox on the phone. However this method does not allow you to either decrypt the email on the phone, or send encrypted email. Since I cannot vouch for any of the PGP implimentations on either iOS or Android, I am not supporting them.</dd>
+        <dt><h2>I want to continue using Hushmail, is this possible with this new system?</h2></dt>
+        <dd>Yes. Both Hushmail and the Engimail+Thunderbird solution here use the same encryption technology. They are 100% compatible in terms of sending and receiving encrypted email. This is assuming that the Enigmail user has uploaded their key to Hushmail, and that they have the public key of the Hushmail users in question. As the number of emails being sent to and from Enigmail increases, I would suggest posting your Hushmail key to the forum.</dd>
+        <dt><h2>How does the security of Thunderbird+Enigmail compare to Hushmail?</h2></dt>
+        <dd>There is no good, 100% answer to this question. The answer is it depends on how the private keys are managed. In Engimail, they private key NEVER leaves your computer. This means that the private key has the same level of security as your computer and the strength of the password of the private keys. In the case of Hushmail, the keys exist only on their servers. Depending on your level of trust of Hushmail this could be either a good thing or a bad thing. As far as the key strength itself, Hushmail uses a 2048-bit RSA key pair, and signs email using SHA-1. Engimail by defualt uses a 4096-bit RSA key pair and SHA-256 to sign email. It is possible to get Enigmail to use SHA-512 for email signing. Since both Thunderbird and Enigmail are opensource it is possible to get the source, audit it, compile it and use that version.</dd>
+
 <h1>Tutorial</h1>
 	<h2>Environment Description</h2>
 		<p>This tutorial was written using a Windows 10 VM and Gmail. This should be mostly the same across OSs except for the installation of GPG, the interface between the graphical environments, and file pathing. Linux should already have GPG installed.
